@@ -1,10 +1,16 @@
 .App {
   text-align: center;
+  display: flex;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.section{ 
+  display: grid;
+  grid-template-columns: 1fr 1fr, 1fr;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,3 +42,27 @@
     transform: rotate(360deg);
   }
 }
+@media(min-width: 1201px), (max-width: 1500px){
+  .section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 901), (max-width: 1200px) { 
+  .section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+} 
+@media (min-width: 601),(max-width: 900px) { 
+  .section{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+} 
+@media (max-width: 600px) { 
+  .section{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+} 
